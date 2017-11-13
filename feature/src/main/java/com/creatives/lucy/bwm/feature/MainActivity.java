@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onNewImage(){
         WallpaperManager m = WallpaperManager.getInstance(getApplicationContext());
+//        InputStream is = getResources().openRawResource(R.raw.background);
         try {
-            m.setResource(R.drawable.IMG_20170723_190556);
+            m.setResource(R.raw.background);
         } catch (IOException e) {
             e.printStackTrace();
         }
